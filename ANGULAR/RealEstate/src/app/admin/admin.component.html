@@ -1,0 +1,31 @@
+<div class="container">
+
+    <a class="text-right buttons" routerLink="/home1" class="btn btn">Home</a>
+    <a class="nav-link" routerLink="/property" class="btn btn">Approve House</a>
+
+    <hr>
+    <p>Here admin can give approval to vendor and add vendor requested product to home page.</p>
+    <p> by referring request of vender</p>
+    <hr>
+    <div class="row">
+        <ng-container *ngFor="let product of  house">
+            <div class="card col-md-3">
+                <p><strong>House id :- </strong> {{product.id}} </p>
+                <img src="../../assets/cards/{{product.propertyImage}}" alt="">
+                <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{product.propertyName}}</h6>
+                <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">With size of
+                    {{product.propertySize}} sq/ft </h6>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    Description {{product.propertyDescription}}</p>
+                <p><strong>Price:</strong> ${{product.propertyPrice}}</p>
+                <p><strong>Discount </strong> At ${{product.discount}} %</p>
+                <img src="../../assets/icons/location.png" width="20"> <span
+                    class="guarantee">{{product.propertylocation}}</span>
+                <p><strong>Request from </strong> {{product.userName}} </p>
+            </div>
+
+        </ng-container>
+
+    </div>
+</div>

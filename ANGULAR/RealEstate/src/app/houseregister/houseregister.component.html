@@ -1,0 +1,178 @@
+<!-- <table>
+
+    <tr>
+        <td>Name of House</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Name of Vender</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.userName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Email-id</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.email" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Description</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyDescription" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Image Name</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyImage" type="text">
+        </td>
+    </tr>
+
+    <tr>
+        <td>size of House</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertySize" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Location</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertylocation" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Price</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyPrice" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Discount</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.discount" type="text">
+        </td>
+    </tr>
+
+    <input type="button" (click)="getHouse()" value="All Requests" />
+    <input type="submit" (click)="registerHouse()" value="send Requests">
+
+</table>
+
+<table border="2">
+    <tr>
+        <td>Name of House</td>
+        <td>Name of Vender</td>
+        <td>Email-id</td>
+        <td>size of House</td>
+        <td>House Price</td>
+    </tr>
+    <tr *ngFor="let item of TblVenderPropertyModels">
+        <td>
+            {{item.propertyName}}
+        </td>
+        <td>
+            {{item.userName}}
+        </td>
+        <td>
+            {{item.email}}
+        </td>
+        <td> {{item.propertySize}}
+        </td>
+        <td> {{item.propertyPrice}}
+        </td>
+
+    </tr>
+</table> -->
+
+
+<table>
+
+    <tr>
+        <td>Name of House</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Name of Vender</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.userName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Email-id</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.email" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Description</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyDescription" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Image Name</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyImage" type="text">
+        </td>
+    </tr>
+
+    <tr>
+        <td>size of House</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertySize" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Location</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertylocation" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Price</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.propertyPrice" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Discount</td>
+        <td>
+            <input [(ngModel)]="TblVenderPropertyModel.discount" type="text">
+        </td>
+    </tr>
+
+    <input type="button" (click)="getHouse()" value="All Requests" />
+    <input type="submit" (click)="registerHouse()" value="send Requests">
+
+</table>
+
+<table border="2">
+    <tr>
+        <td>Name of House</td>
+        <td>Name of Vender</td>
+        <td>Email-id</td>
+        <td>size of House</td>
+        <td>House Price</td>
+    </tr>
+    <tr *ngFor="let item of TblVenderPropertyModels">
+        <td>
+            {{item.propertyName}}
+        </td>
+        <td>
+            {{item.userName}}
+        </td>
+        <td>
+            {{item.email}}
+        </td>
+        <td> {{item.propertySize}}
+        </td>
+        <td> {{item.propertyPrice}}
+        </td>
+
+    </tr>
+</table>

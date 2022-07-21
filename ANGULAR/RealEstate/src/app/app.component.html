@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="container-fluid px-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed">
+      <div class="d-flex flex-row">
+        <img src="../assets/icons/MainIcon.png" class="rounded-circle" width="40">
+      </div>
+      <div class="container-fluid">
+
+        <div class="container-fluid d-flex"> <a class="navbar-brand" href="#" routerLink="/home1">E-HouseBooking</a>
+          <div class="col-md-13">
+            <div class="d-flex form-inputs">
+              <input class="form-control" type="text"  *ngIf="LoggedIn(true)" [(ngModel)]="searchTerm" (keyup)="search($event)"
+                placeholder="Search for location..." />
+              <i class="bx bx-search" ></i>
+            </div>
+          </div>
+          <!-- <a class="navbar-brand" routerLink="/home1">House Booking</a> -->
+          <ul class="nav nav-tabs ml-auto" id="myTab" role="tablist">
+
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/home1">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/register">Register</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="LoggedIn(true)" routerLink="/account">My Account</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="LoggedIn(true)" (click)="LogOut()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+<br>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="container-fluid">
+  <br>
+  <footer class="footer-light bg-light footer-fixed">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 footer-navigation">
+        <div class="container-fluid">
+          <h3><a href="#">E-<span>HouseBooking</span></a></h3>
+          <p class="links"><a href="#">Home</a><strong> &middot; </strong><a href="#">Blog</a><strong>
+              &middot;
+            </strong><a href="#">Pricing</a><strong> &middot; </strong><a href="#">About</a><strong>
+              &middot;
+            </strong><a href="#">Faq</a><strong> &middot; </strong><a href="#">Contact</a></p>
+          <p class="company-name">E-HouseBooking.com &copy; 2020</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 footer-contacts">
+        <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+          <p><span class="new-line-span">21 Revolution Street,</span> INDIA</p>
+        </div>
+        <div><i class="fa fa-phone footer-contacts-icon"></i>
+          <p class="footer-center-info email text-left"> +91 9489489489</p>
+        </div>
+        <div><i class="fa fa-envelope footer-contacts-icon"></i>
+          <p> <a href="#" target="_blank">support@housebooking.com</a></p>
+        </div>
+      </div>
+
+
+      <div class="col-sm-6 col-md-4 footer-contacts">
+        <h4>About the company</h4>
+        <p>E-HouseBooking.com is one of the leading website for Properties dealing.</p>
+        <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+              class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i
+              class="fa fa-github"></i></a></div>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid min-vh-100">
+    <h4>This is vendor page</h4>
+    <a class="nav-link" routerLink="/see-order" class="btn btn">See order</a>
+    <a class="nav-link" routerLink="/houseregister" class="btn btn">Register House</a>
+    <div class="container-fluid">
+        <div class="row">
+            <ng-container *ngFor="let product of  property">
+                <div class="card col-md-3">
+                    <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">vendor
+                        Name
+                        {{product.userName}} </h6>
+                    <img src="../../assets/cards/{{product.propertyImage}}" alt="">
+                    <h4 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                        {{product.propertyName}}</h4>
+                    <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">With size
+                        of
+                        {{product.propertySize}} sq/ft </h6>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                        Description {{product.propertyDescription}}</p>
+                    <p><strong>Price:</strong> ${{product.propertyPrice}}</p>
+                    <p><strong>Discount </strong> At ${{product.discount}} %</p>
+                    <img src="../../assets/icons/location.png" width="20"> <span
+                        class="guarantee">{{product.propertylocation}}</span>
+                </div>
+
+            </ng-container>
+
+        </div>
+    </div>
+</div>

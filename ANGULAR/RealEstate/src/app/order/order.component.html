@@ -1,0 +1,134 @@
+<div class="container">
+    <div class="py-5 text-center">
+
+        <h2>House Booking Form</h2>
+        <p class="lead">Fill up the form to get the approval for your booked house, after filling up the details click
+            on book this house to submit the form without compeleting it.</p>
+    </div>
+
+
+
+
+    <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">To book the house please fill you personal details below</h4>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName">Full name</label>
+                <input type="text" class="form-control" [(ngModel)]="TblOrderModel.fullName"
+                    [ngModelOptions]="{standalone: true}" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">UserName</label>
+                <input type="text" class="form-control" [(ngModel)]="TblOrderModel.userName"
+                    [ngModelOptions]="{standalone: true}" id="lastName" placeholder="enter your username" value=""
+                    required>
+                <div class="invalid-feedback">
+                    Valid name is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="username"> Vender Name</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" [(ngModel)]="TblOrderModel.venderName"
+                    [ngModelOptions]="{standalone: true}" id="username" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Your username is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="TblOrderModel.email"
+                    [ngModelOptions]="{standalone: true}" id="email" placeholder="you@example.com" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="address"> Address</label>
+            <input type="text" class="form-control" [(ngModel)]="TblOrderModel.address"
+                [ngModelOptions]="{standalone: true}" id="address" placeholder="1234 Main St" required>
+            <div class="invalid-feedback">
+                Please enter your current address.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="address"> House price</label>
+            <input type="text" class="form-control" [(ngModel)]="TblOrderModel.housePrice" id="address"
+                placeholder="1234 Main St" required>
+            <div class="invalid-feedback">
+                Please enter your current address.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="address"> House name </label>
+            <input type="text" class="form-control" [(ngModel)]="TblOrderModel.propertyImage"
+                [ngModelOptions]="{standalone: true}" id="address" placeholder="1234 Main St" required>
+            <div class="invalid-feedback">
+                Please enter your current address.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option value="">Choose...</option>
+                    <option>INDIA</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid country.
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="state">State</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="">Choose...</option>
+                    <option>Gujarat</option>
+                    <option>Mumbai</option>
+                    <option>Delhi</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="zip">Zip</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                    Zip code required.
+                </div>
+            </div>
+        </div>
+
+       
+        <button class="btn btn-primary btn-lg btn-block" (click)="AddOrder() " type="submit">BOOK THIS HOUSE</button>
+
+    </div>
+
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>

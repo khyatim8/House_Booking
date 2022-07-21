@@ -1,0 +1,188 @@
+<!-- <table>
+    <tr>
+        <td>Name of House</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Name of vender</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.userName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Description</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyDescription" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Image Name</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyImage" type="text">
+        </td>
+    </tr>
+
+    <tr>
+        <td>size of House</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertySize" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Location</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertylocation" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Price</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyPrice" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Discount</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.discount" type="text">
+        </td>
+    </tr>
+    <input type="button" (click)="getData()" value="getData" />
+    <input type="submit" (click)="AddProperty()">
+
+</table>
+
+<table border="2">
+    <tr>
+        <td>Name of House</td>
+        <td>Name of vender</td>
+        <td>House Description</td>
+        <td>House Image Name</td>
+        <td>size of House</td>
+        <td>House Location</td>
+        <td>House Price</td>
+        <td>Discount</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let item of TblPropertyModels">
+        <td>
+            {{item.propertyName}}
+        </td>
+        <td>
+            {{item.userName}}
+        </td>
+        <td> {{item.propertyDescription}}
+        </td>
+        <td> {{item.propertyImage}}
+        </td>
+        <td> {{item.propertySize}}
+        </td>
+        <td> {{item.propertylocation}}
+        </td>
+        <td> {{item.propertyPrice}}
+        </td>
+        <td> {{item.discount}}
+        </td>
+        <td>
+            <input type="button" value="Edit" (click)="EditCustomer(item)" />
+            <input type="button" value="Delete" (click)="DeleteProperty(item)" />
+        </td>
+    </tr>
+</table> -->
+
+
+
+<table>
+    <tr>
+        <td>Name of House</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Name of vender</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.userName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Description</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyDescription" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Image Name</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyImage" type="text">
+        </td>
+    </tr>
+
+    <tr>
+        <td>size of House</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertySize" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Location</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertylocation" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>House Price</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.propertyPrice" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Discount</td>
+        <td>
+            <input [(ngModel)]="TblPropertyModel.discount" type="text">
+        </td>
+    </tr>
+    <!--  <input type="button" (click)="getData()" value="Check Requets"/> -->
+    <input type="submit" (click)="AddProperty()" value="Approve">
+
+</table>
+
+<table border="2">
+    <tr>
+        <td>Name of House</td>
+        <td>Name of vender</td>
+        <td>House Description</td>
+        <td>House Image Name</td>
+        <td>size of House</td>
+        <td>House Location</td>
+        <td>House Price</td>
+        <td>Discount</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let item of  house">
+        <td>
+            {{item.propertyName}}
+        </td>
+        <td>
+            {{item.userName}}
+        </td>
+        <td> {{item.propertyDescription}}
+        </td>
+        <td> {{item.propertyImage}}
+        </td>
+        <td> {{item.propertySize}}
+        </td>
+        <td> {{item.propertylocation}}
+        </td>
+        <td> {{item.propertyPrice}}
+        </td>
+        <td> {{item.discount}}
+        </td>
+
+        <td>
+            <input type="button" value="Add" (click)="EditCustomer(item)" />
+
+        </td>
+    </tr>
+</table>

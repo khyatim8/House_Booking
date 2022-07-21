@@ -1,0 +1,48 @@
+<div class="container-fluid min-vh-100">
+    <div class="container mt-9">
+        <h3>REGISTRATION FORM</h3>
+        <p>Write details in below fields and click submit tp create your account</p>
+        <form action="/action_page.php" class="needs-validation">
+            <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">UserName</label>
+                <input type="text" class="form-control" [(ngModel)]="registerUserData.userName" id="uname"
+                    placeholder="Please enter your User Name" name="uname" required>
+
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="pwd">Password</label>
+                <input type="password" class="form-control" [minLength]="8" [(ngModel)]="registerUserData.password"
+                    [ngModelOptions]="{standalone: true}" placeholder="Password" name="pwd">
+
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="floatingemail">Email Id</label>
+                <input type="email" class="form-control" id="floatingemail" [(ngModel)]="registerUserData.email"
+                    placeholder="Enter Email-Id / example@abc.com" name="pwd" required>
+
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <!-- <div class="col-md-12">
+                <label class="form-label" for="floatingemail">Email Id</label>
+                <input type="email" class="form-control" id="floatingemail" [(ngModel)]="registerUserData.email"
+                    placeholder="Enter Email-Id">
+            </div> -->
+
+
+
+            <div class="col-12">
+                <div class="form-check"></div>
+            </div>
+            <button class="btn btn-lg btn-primary" (click)="registerUser()" routerLink="/login"
+                type="submit">Register</button>
+        </form>
+    </div>
+</div>

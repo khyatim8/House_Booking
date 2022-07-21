@@ -1,0 +1,56 @@
+<div class="container-fluid min-vh-100">
+
+
+    <!-- <a class="nav-link" routerLink="/houseregister" class="btn btn">Resister House</a> -->
+    <!-- <div class="card"> <img src="../../assets/cards/card1.jpg" class="card-img-top">
+                <div class="card-body"> -->
+    <div class="container-fluid d-flex"> <br>
+
+        <ng-container *ngFor="let product of  property | filter:searchkey:'propertylocation'">
+            <!-- <div class="card col-md-3"> 
+
+                <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{product.userName}} </h6>
+                <img src="../../assets/cards/{{product.propertyImage}}" alt="">
+                <h4 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{product.propertyName}}</h4>
+                <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">With size
+                    of
+                    {{product.propertySize}} sq/ft </h6>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{product.propertyDescription}}</p>
+                <p><strong>Price:</strong> ${{product.propertyPrice}}</p>
+                <p><strong>Discount :- </strong> At ${{product.discount}} %</p>
+                <img src="../../assets/icons/location.png" width="20"> <span
+                    class="guarantee">{{product.propertylocation}}</span>
+                <a class="nav-link" routerLink="/order" class="btn btn-primary">Book Now...!</a>
+                <br>
+            </div> -->
+
+
+            <div class="col-md-4">
+                <div class="card"> <img src="../../assets/cards/{{product.propertyImage}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between"> <span class="font-weight-bold">
+                                {{product.propertyName}}</span> <span
+                                class="font-weight-bold">${{product.propertyPrice}}</span> 
+                                 </div>
+                                 <span
+                                class="font-weight-bold">Discount of ${{product.discount}} % </span>
+                        <p class="card-text mb-1 mt-1"> {{product.propertyDescription}}</p>
+                        <p class="card-text mb-1 mt-1"></p>
+                        <div class="d-flex align-items-center flex-row"> <img src="../../assets/icons/location.png"
+                                width="20"> <span class="guarantee">{{product.propertylocation}}</span> </div>
+                    </div>
+
+                    <a class="nav-link" routerLink="/order" class="btn btn-primary">Book Now...!</a>
+                    <!-- <div class="text-right buttons"> <button class="btn btn-dark" routerLink="/login">Book Now</button> -->
+                </div>
+            </div>
+
+        </ng-container>
+    </div>
+
+
+
+</div>
